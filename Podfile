@@ -6,4 +6,5 @@ pod "HandyJSON"
 pod "Alamofire"
 pod "Kingfisher"
 pod "SKPhotoBrowser"
+pod "ZLPhotoBrowser"
 end

@@ -24,7 +24,29 @@
 		462922501F316195008757CB /* RepairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4629224E1F316195008757CB /* RepairCell.xib */; };
 		462922521F31B303008757CB /* RepairInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462922511F31B303008757CB /* RepairInfo.xib */; };
 		462922541F31B87C008757CB /* RepairInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462922531F31B87C008757CB /* RepairInfoView.swift */; };
+		46355A061F550DC50053B373 /* TGActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559F11F550DC50053B373 /* TGActionSheet.swift */; };
+		46355A071F550DC50053B373 /* TGAlbumPhotoPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559F21F550DC50053B373 /* TGAlbumPhotoPreviewVC.swift */; };
+		46355A081F550DC50053B373 /* TGAnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559F31F550DC50053B373 /* TGAnimationButton.swift */; };
+		46355A091F550DC50053B373 /* TGBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559F41F550DC50053B373 /* TGBottomBar.swift */; };
+		46355A0A1F550DC50053B373 /* TGCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559F51F550DC50053B373 /* TGCameraVC.swift */; };
+		46355A0B1F550DC50053B373 /* TGCameraVCForiOS8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559F61F550DC50053B373 /* TGCameraVCForiOS8.swift */; };
+		46355A0C1F550DC50053B373 /* TGFetchM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559F71F550DC50053B373 /* TGFetchM.swift */; };
+		46355A0D1F550DC50053B373 /* TGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559F81F550DC50053B373 /* TGImage.swift */; };
+		46355A0E1F550DC50053B373 /* TGPhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559F91F550DC50053B373 /* TGPhotoCollectionVC.swift */; };
+		46355A0F1F550DC50053B373 /* TGPhotoFetchOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559FA1F550DC50053B373 /* TGPhotoFetchOptions.swift */; };
+		46355A101F550DC50053B373 /* TGPhotoImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559FB1F550DC50053B373 /* TGPhotoImageManager.swift */; };
+		46355A111F550DC50053B373 /* TGPhotoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559FC1F550DC50053B373 /* TGPhotoListVC.swift */; };
+		46355A121F550DC50053B373 /* TGPhotoM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559FD1F550DC50053B373 /* TGPhotoM.swift */; };
+		46355A131F550DC50053B373 /* TGPhotoPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 463559FE1F550DC50053B373 /* TGPhotoPicker.bundle */; };
+		46355A141F550DC50053B373 /* TGPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463559FF1F550DC50053B373 /* TGPhotoPicker.swift */; };
+		46355A151F550DC50053B373 /* TGPhotoPickerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46355A001F550DC50053B373 /* TGPhotoPickerConfig.swift */; };
+		46355A161F550DC50053B373 /* TGPhotoPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46355A011F550DC50053B373 /* TGPhotoPickerManager.swift */; };
+		46355A171F550DC50053B373 /* TGPhotoPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46355A021F550DC50053B373 /* TGPhotoPickerVC.swift */; };
+		46355A181F550DC50053B373 /* TGPhotoPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46355A031F550DC50053B373 /* TGPhotoPreviewCell.swift */; };
+		46355A191F550DC50053B373 /* TGPhotoPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46355A041F550DC50053B373 /* TGPhotoPreviewVC.swift */; };
+		46355A1A1F550DC50053B373 /* TGTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46355A051F550DC50053B373 /* TGTopBar.swift */; };
 		463C73501F4C0BC200F81BBA /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463C734F1F4C0BC200F81BBA /* MineViewController.swift */; };
+		4656A0D21F73A537003BE3F0 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656A0D11F73A536003BE3F0 /* ImageCell.swift */; };
 		4678CD491F43E4A300ADEE94 /* EquipmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678CD481F43E4A300ADEE94 /* EquipmentDetail.swift */; };
 		467AB4741F458A1700BDFA2C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AB4731F458A1700BDFA2C /* UIImage+Extension.swift */; };
 		468E74E51F3060FC00177212 /* EquipmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E74E41F3060FC00177212 /* EquipmentInfo.swift */; };
@@ -84,8 +106,30 @@
 		4629224E1F316195008757CB /* RepairCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepairCell.xib; sourceTree = "<group>"; };
 		462922511F31B303008757CB /* RepairInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepairInfo.xib; sourceTree = "<group>"; };
 		462922531F31B87C008757CB /* RepairInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepairInfoView.swift; sourceTree = "<group>"; };
+		463559F11F550DC50053B373 /* TGActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGActionSheet.swift; sourceTree = "<group>"; };
+		463559F21F550DC50053B373 /* TGAlbumPhotoPreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGAlbumPhotoPreviewVC.swift; sourceTree = "<group>"; };
+		463559F31F550DC50053B373 /* TGAnimationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGAnimationButton.swift; sourceTree = "<group>"; };
+		463559F41F550DC50053B373 /* TGBottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGBottomBar.swift; sourceTree = "<group>"; };
+		463559F51F550DC50053B373 /* TGCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGCameraVC.swift; sourceTree = "<group>"; };
+		463559F61F550DC50053B373 /* TGCameraVCForiOS8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGCameraVCForiOS8.swift; sourceTree = "<group>"; };
+		463559F71F550DC50053B373 /* TGFetchM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGFetchM.swift; sourceTree = "<group>"; };
+		463559F81F550DC50053B373 /* TGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGImage.swift; sourceTree = "<group>"; };
+		463559F91F550DC50053B373 /* TGPhotoCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoCollectionVC.swift; sourceTree = "<group>"; };
+		463559FA1F550DC50053B373 /* TGPhotoFetchOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoFetchOptions.swift; sourceTree = "<group>"; };
+		463559FB1F550DC50053B373 /* TGPhotoImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoImageManager.swift; sourceTree = "<group>"; };
+		463559FC1F550DC50053B373 /* TGPhotoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoListVC.swift; sourceTree = "<group>"; };
+		463559FD1F550DC50053B373 /* TGPhotoM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoM.swift; sourceTree = "<group>"; };
+		463559FE1F550DC50053B373 /* TGPhotoPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TGPhotoPicker.bundle; sourceTree = "<group>"; };
+		463559FF1F550DC50053B373 /* TGPhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoPicker.swift; sourceTree = "<group>"; };
+		46355A001F550DC50053B373 /* TGPhotoPickerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoPickerConfig.swift; sourceTree = "<group>"; };
+		46355A011F550DC50053B373 /* TGPhotoPickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoPickerManager.swift; sourceTree = "<group>"; };
+		46355A021F550DC50053B373 /* TGPhotoPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoPickerVC.swift; sourceTree = "<group>"; };
+		46355A031F550DC50053B373 /* TGPhotoPreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoPreviewCell.swift; sourceTree = "<group>"; };
+		46355A041F550DC50053B373 /* TGPhotoPreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGPhotoPreviewVC.swift; sourceTree = "<group>"; };
+		46355A051F550DC50053B373 /* TGTopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTopBar.swift; sourceTree = "<group>"; };
 		463C734F1F4C0BC200F81BBA /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		464F7223EA358F36120F0E9D /* Pods-Repair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repair.release.xcconfig"; path = "Pods/Target Support Files/Pods-Repair/Pods-Repair.release.xcconfig"; sourceTree = "<group>"; };
+		4656A0D11F73A536003BE3F0 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		4678CD481F43E4A300ADEE94 /* EquipmentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentDetail.swift; sourceTree = "<group>"; };
 		467AB4731F458A1700BDFA2C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		468E74E41F3060FC00177212 /* EquipmentInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentInfo.swift; sourceTree = "<group>"; };
@@ -154,6 +198,34 @@
 			name = other;
 			sourceTree = "<group>";
 		};
+		463559F01F550DC50053B373 /* TGPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				463559F11F550DC50053B373 /* TGActionSheet.swift */,
+				463559F21F550DC50053B373 /* TGAlbumPhotoPreviewVC.swift */,
+				463559F31F550DC50053B373 /* TGAnimationButton.swift */,
+				463559F41F550DC50053B373 /* TGBottomBar.swift */,
+				463559F51F550DC50053B373 /* TGCameraVC.swift */,
+				463559F61F550DC50053B373 /* TGCameraVCForiOS8.swift */,
+				463559F71F550DC50053B373 /* TGFetchM.swift */,
+				463559F81F550DC50053B373 /* TGImage.swift */,
+				463559F91F550DC50053B373 /* TGPhotoCollectionVC.swift */,
+				463559FA1F550DC50053B373 /* TGPhotoFetchOptions.swift */,
+				463559FB1F550DC50053B373 /* TGPhotoImageManager.swift */,
+				463559FC1F550DC50053B373 /* TGPhotoListVC.swift */,
+				463559FD1F550DC50053B373 /* TGPhotoM.swift */,
+				463559FE1F550DC50053B373 /* TGPhotoPicker.bundle */,
+				463559FF1F550DC50053B373 /* TGPhotoPicker.swift */,
+				46355A001F550DC50053B373 /* TGPhotoPickerConfig.swift */,
+				46355A011F550DC50053B373 /* TGPhotoPickerManager.swift */,
+				46355A021F550DC50053B373 /* TGPhotoPickerVC.swift */,
+				46355A031F550DC50053B373 /* TGPhotoPreviewCell.swift */,
+				46355A041F550DC50053B373 /* TGPhotoPreviewVC.swift */,
+				46355A051F550DC50053B373 /* TGTopBar.swift */,
+			);
+			path = TGPhotoPicker;
+			sourceTree = "<group>";
+		};
 		468E74E21F305D6100177212 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +259,7 @@
 		46B2B3CF1F2ED69100DE666D /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4656A0D11F73A536003BE3F0 /* ImageCell.swift */,
 				46B2B3D01F2ED6C100DE666D /* TBButton.swift */,
 				4629224D1F316195008757CB /* RepairCell.swift */,
 				4629224E1F316195008757CB /* RepairCell.xib */,
@@ -224,6 +297,7 @@
 		46E73D9D1F26F44700FC2F02 /* Repair */ = {
 			isa = PBXGroup;
 			children = (
+				463559F01F550DC50053B373 /* TGPhotoPicker */,
 				468E74E31F305D8400177212 /* model */,
 				468E74E21F305D6100177212 /* controller */,
 				46B2B3CF1F2ED69100DE666D /* view */,
@@ -397,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4612DF911F4C743E00900AD8 /* AreaViewController.xib in Resources */,
+				46355A131F550DC50053B373 /* TGPhotoPicker.bundle in Resources */,
 				46FA5A361F39A6E70064D66D /* TableHeaderView.xib in Resources */,
 				46E73DA91F26F44700FC2F02 /* LaunchScreen.storyboard in Resources */,
 				462922501F316195008757CB /* RepairCell.xib in Resources */,
@@ -478,30 +553,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				4612DF901F4C743E00900AD8 /* AreaViewController.swift in Sources */,
+				46355A071F550DC50053B373 /* TGAlbumPhotoPreviewVC.swift in Sources */,
 				460CA8B01F281D24000A2B04 /* LoginViewController.swift in Sources */,
+				46355A181F550DC50053B373 /* TGPhotoPreviewCell.swift in Sources */,
+				46355A141F550DC50053B373 /* TGPhotoPicker.swift in Sources */,
 				460E9CCD1F2AECA000DFA483 /* IndexViewController.swift in Sources */,
 				468E74E51F3060FC00177212 /* EquipmentInfo.swift in Sources */,
+				46355A0C1F550DC50053B373 /* TGFetchM.swift in Sources */,
 				46B2D0621F428C8200B4FC6F /* InfDetailViewController.swift in Sources */,
 				46E73DD01F271D0900FC2F02 /* Response.swift in Sources */,
 				46B2B3D11F2ED6C100DE666D /* TBButton.swift in Sources */,
+				46355A0A1F550DC50053B373 /* TGCameraVC.swift in Sources */,
+				46355A0E1F550DC50053B373 /* TGPhotoCollectionVC.swift in Sources */,
+				46355A171F550DC50053B373 /* TGPhotoPickerVC.swift in Sources */,
 				46FA5A341F39A6DE0064D66D /* TableHeaderView.swift in Sources */,
+				46355A061F550DC50053B373 /* TGActionSheet.swift in Sources */,
 				4611B2871F4D2ADD00D3B54E /* UserInfo.swift in Sources */,
+				46355A0B1F550DC50053B373 /* TGCameraVCForiOS8.swift in Sources */,
 				4610EC411F29B9CF00B7191C /* SoapManager.swift in Sources */,
+				46355A091F550DC50053B373 /* TGBottomBar.swift in Sources */,
 				46B2B3C81F2EC03A00DE666D /* CacheUtil.swift in Sources */,
+				46355A151F550DC50053B373 /* TGPhotoPickerConfig.swift in Sources */,
 				467AB4741F458A1700BDFA2C /* UIImage+Extension.swift in Sources */,
 				4678CD491F43E4A300ADEE94 /* EquipmentDetail.swift in Sources */,
+				46355A0D1F550DC50053B373 /* TGImage.swift in Sources */,
 				463C73501F4C0BC200F81BBA /* MineViewController.swift in Sources */,
 				4611B2891F4D644300D3B54E /* ReportViewController.swift in Sources */,
 				46E73DA11F26F44700FC2F02 /* ViewController.swift in Sources */,
 				460CA8C61F28743F000A2B04 /* MD5.swift in Sources */,
+				4656A0D21F73A537003BE3F0 /* ImageCell.swift in Sources */,
+				46355A1A1F550DC50053B373 /* TGTopBar.swift in Sources */,
 				46C1916F1F4AADF500E7CD4B /* QRCodeViewController.swift in Sources */,
 				46E73DCD1F271CCB00FC2F02 /* Area.swift in Sources */,
+				46355A121F550DC50053B373 /* TGPhotoM.swift in Sources */,
 				46B2B3CA1F2ECC4F00DE666D /* SearchViewController.swift in Sources */,
 				4610EC431F29DB4B00B7191C /* OrderedDictionary.swift in Sources */,
 				460E9CCB1F2AE02F00DFA483 /* CHProgressHUD.swift in Sources */,
+				46355A161F550DC50053B373 /* TGPhotoPickerManager.swift in Sources */,
 				462922541F31B87C008757CB /* RepairInfoView.swift in Sources */,
+				46355A081F550DC50053B373 /* TGAnimationButton.swift in Sources */,
 				4610EC3F1F29B7BE00B7191C /* SoapAction.swift in Sources */,
+				46355A191F550DC50053B373 /* TGPhotoPreviewVC.swift in Sources */,
+				46355A111F550DC50053B373 /* TGPhotoListVC.swift in Sources */,
+				46355A0F1F550DC50053B373 /* TGPhotoFetchOptions.swift in Sources */,
 				46E73D9F1F26F44700FC2F02 /* AppDelegate.swift in Sources */,
+				46355A101F550DC50053B373 /* TGPhotoImageManager.swift in Sources */,
 				468E74E71F307A9100177212 /* InformationViewController.swift in Sources */,
 				4629224F1F316195008757CB /* RepairCell.swift in Sources */,
 			);
@@ -650,12 +746,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7N8MX389D3;
 				INFOPLIST_FILE = Repair/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chablis.Repair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Repair/Repair-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -670,12 +768,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7N8MX389D3;
 				INFOPLIST_FILE = Repair/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chablis.Repair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Repair/Repair-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

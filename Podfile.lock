@@ -4,6 +4,7 @@ PODS:
   - Kingfisher (3.10.4)
   - SKPhotoBrowser (4.0.1)
   - SVProgressHUD (2.1.2)
+  - ZLPhotoBrowser (2.3.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - Kingfisher
   - SKPhotoBrowser
   - SVProgressHUD
+  - ZLPhotoBrowser
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -18,7 +20,8 @@ SPEC CHECKSUMS:
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
   SKPhotoBrowser: 3a7c6fc02aa1620ab17253a47a49fafda46536e8
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  ZLPhotoBrowser: d8a5fe846a35777f4a6ae4a1130b19e1cb8de8e0
 
-PODFILE CHECKSUM: 74029a9b0655623399ffad71560c934c172e510e
+PODFILE CHECKSUM: 5022fac73477cac9cca65eca5afd9c76d3d9dfc2
 
 COCOAPODS: 1.2.1

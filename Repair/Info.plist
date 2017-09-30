@@ -29,6 +29,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>cameraDesciption</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>microphoneDesciption</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App 需要您的同意才能读取媒体资料库</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -48,11 +54,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-	<key>NSCameraUsageDescription</key>
-	<string>cameraDesciption</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App 需要您的同意才能读取媒体资料库</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>microphoneDesciption</string>
 </dict>
 </plist>

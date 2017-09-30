@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0252C03DCAB660D76A7DD699EBE26C2F"
+               BlueprintIdentifier = "2A15A09172C1912990DB0E52E10479C3"
                BuildableName = "Pods_Repair.framework"
                BlueprintName = "Pods-Repair"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0252C03DCAB660D76A7DD699EBE26C2F"
+            BlueprintIdentifier = "2A15A09172C1912990DB0E52E10479C3"
             BuildableName = "Pods_Repair.framework"
             BlueprintName = "Pods-Repair"
             ReferencedContainer = "container:Pods.xcodeproj">
