@@ -30,6 +30,8 @@ class SoapAction : NSObject{
             case EquimentInfoAction = "queryTainIdByClientType"
             case EquimentDetailAction="queryMainTainById"
             case MyRepairAction="queryListByRepairId"
+            
+            case Classes = "insertView"
         }
     }
 }

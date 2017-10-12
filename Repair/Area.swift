@@ -9,7 +9,7 @@
 import UIKit
 import HandyJSON
 
-class Area: HandyJSON {
+class Area: CHPickerModel {
     required init() {
     }
     /**
@@ -24,7 +24,7 @@ class Area: HandyJSON {
     var areaCode : String!
     var id : String!
     var open : Bool!
-    var name : String!
+//    var name : String!
     var pId : String!
     
 }

@@ -33,15 +33,15 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     @IBAction func showAreaList(_ sender: UIButton) {
-        let pick=AreaViewController(nibName: "AreaViewController", bundle: nil)
-        pick.areas=areas
-        pick.selectedArea=areas[0]
+        let pick=CHPickerViewController(nibName: "CHPickerViewController", bundle: nil)
+        pick.objs=areas
+        pick.selectedObj=areas[0]
         currentArea=areas[0]
-        pick.areaBlock={area in
+        pick.backBlock={area in
             //回传选择的政务中心
-            self.currentArea=area
+            self.currentArea=area as! Area
             self.areaButton.setTitle(area.name, for: UIControlState.normal)
-            self.getMyRepair(areaCode: area.areaCode)
+            self.getMyRepair(areaCode: self.currentArea.areaCode)
         }
         pick.modalPresentationStyle=UIModalPresentationStyle.custom
         present(pick, animated: true, completion: nil)

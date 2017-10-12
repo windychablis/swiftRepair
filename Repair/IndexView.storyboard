@@ -392,14 +392,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_bg" translatesAutoresizingMaskIntoConstraints="NO" id="djP-4u-jbv">
-                                <rect key="frame" x="67" y="183.5" width="240" height="300"/>
+                                <rect key="frame" x="67.5" y="183.5" width="240" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="b6M-c3-KJ9"/>
                                     <constraint firstAttribute="height" constant="300" id="idk-KD-Dn7"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_line" translatesAutoresizingMaskIntoConstraints="NO" id="Tjl-KI-TML">
-                                <rect key="frame" x="67" y="183.5" width="240" height="2"/>
+                                <rect key="frame" x="67.5" y="183.5" width="240" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="GZu-PI-YBl"/>
                                 </constraints>
@@ -591,6 +591,9 @@
                                 <state key="normal" title="设备故障">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="showBigClass:" destination="Wgq-t2-fBV" eventType="touchUpInside" id="zP9-ax-9qS"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="PUp-eT-s9I">
                                 <rect key="frame" x="342" y="148.5" width="9" height="15"/>
@@ -636,6 +639,9 @@
                                 <state key="normal" title="打印机缺墨">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="showSmallClass:" destination="Wgq-t2-fBV" eventType="touchUpInside" id="NRR-rO-bVj"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Npk-Wy-UaZ">
                                 <rect key="frame" x="24" y="265" width="327" height="40"/>
@@ -756,7 +762,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bigClassView" destination="WK6-wR-ai7" id="M4z-Mo-Lij"/>
                         <outlet property="imagesView" destination="Spd-tC-JLj" id="Mc5-0u-30E"/>
+                        <outlet property="questionView" destination="1IX-4w-e1C" id="bM3-7F-bM5"/>
+                        <outlet property="smallClassView" destination="XXh-Z6-hz1" id="u6h-Ms-KK7"/>
+                        <outlet property="titleView" destination="Npk-Wy-UaZ" id="YKz-QY-95H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zle-FH-pJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>

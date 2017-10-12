@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CHPickerViewController" customModule="Repair">
+            <connections>
+                <outlet property="containerView" destination="Cdv-3U-5mc" id="Qfi-tc-EWa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdv-3U-5mc">
+                    <rect key="frame" x="0.0" y="427" width="375" height="240"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbd-46-6SR">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="hS8-s3-J86"/>
+                                <constraint firstAttribute="width" constant="100" id="rWs-Wa-trh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="取消"/>
+                            <connections>
+                                <action selector="cancel:" destination="-1" eventType="touchUpInside" id="Nly-Il-IRe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg6-lR-ZOR">
+                            <rect key="frame" x="275" y="0.0" width="100" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="83f-s5-svV"/>
+                                <constraint firstAttribute="width" constant="100" id="Ai3-9a-ifE"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="bqH-Fu-2BT"/>
+                                <constraint firstAttribute="height" constant="40" id="pvX-cr-CnE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="确定"/>
+                            <connections>
+                                <action selector="confirm:" destination="-1" eventType="touchUpInside" id="zzG-jt-YGd"/>
+                            </connections>
+                        </button>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPp-0c-gcF">
+                            <rect key="frame" x="0.0" y="40" width="375" height="200"/>
+                            <color key="backgroundColor" red="0.90402325939999995" green="0.90402325939999995" blue="0.90402325939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="4hK-bL-y2C"/>
+                                <outlet property="delegate" destination="-1" id="4Nr-Eu-C2T"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.25491765869999999" green="0.78388837430000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="DPp-0c-gcF" firstAttribute="leading" secondItem="Cdv-3U-5mc" secondAttribute="leading" id="4Hp-R2-mwE"/>
+                        <constraint firstItem="Sg6-lR-ZOR" firstAttribute="top" secondItem="Cdv-3U-5mc" secondAttribute="top" id="IkL-bM-USF"/>
+                        <constraint firstAttribute="bottom" secondItem="DPp-0c-gcF" secondAttribute="bottom" id="PWw-4S-ruj"/>
+                        <constraint firstAttribute="trailing" secondItem="Sg6-lR-ZOR" secondAttribute="trailing" id="RGY-Im-lTo"/>
+                        <constraint firstAttribute="height" constant="240" id="cbg-5N-azG"/>
+                        <constraint firstItem="DPp-0c-gcF" firstAttribute="top" secondItem="Sg6-lR-ZOR" secondAttribute="bottom" id="ftn-cS-PEY"/>
+                        <constraint firstItem="pbd-46-6SR" firstAttribute="top" secondItem="Cdv-3U-5mc" secondAttribute="top" id="gsr-A6-QTl"/>
+                        <constraint firstItem="pbd-46-6SR" firstAttribute="leading" secondItem="Cdv-3U-5mc" secondAttribute="leading" id="qre-ih-auh"/>
+                        <constraint firstAttribute="trailing" secondItem="DPp-0c-gcF" secondAttribute="trailing" id="vru-Im-bxc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Cdv-3U-5mc" secondAttribute="bottom" id="8ne-k6-rlx"/>
+                <constraint firstItem="Cdv-3U-5mc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9i6-7C-v5U"/>
+                <constraint firstAttribute="trailing" secondItem="Cdv-3U-5mc" secondAttribute="trailing" id="mVN-8n-nrs"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

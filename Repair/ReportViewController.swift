@@ -8,6 +8,7 @@
 
 import UIKit
 import ZLPhotoBrowser
+import HandyJSON
 
 class ReportViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -15,27 +16,74 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
     var images : [UIImage] = []
     var lastSelectPhotos : [UIImage]!
     var lastSelectAssets : [PHAsset]!
-    var sheet : ZLPhotoActionSheet!
     
+    @IBOutlet weak var bigClassView: UIButton!
+    @IBOutlet weak var smallClassView: UIButton!
+    @IBOutlet weak var titleView: UITextField!
+    @IBOutlet weak var questionView: UITextField!
+    
+    var breakType : BreakType!
+    var currentBig : BreakType.ClassType!
     override func viewDidLoad() {
         super.viewDidLoad()
+        getClasses()
         //放到界面中去
         initCollectionView()
-        sheet = ZLPhotoActionSheet()
+        
+    }
+    @IBAction func showBigClass(_ sender: UIButton) {
+        let pick=CHPickerViewController(nibName: "CHPickerViewController", bundle: nil)
+        pick.objs=breakType.bigClassList
+        CHLog(pick.objs[0].name)
+        pick.selectedObj=breakType.bigClassList[0]
+        currentBig=breakType.bigClassList[0]
+        pick.backBlock={type in
+            //回传选择的政务中心
+            self.currentBig=type as! BreakType.ClassType
+            self.bigClassView.setTitle(type.name, for: UIControlState.normal)
+        }
+        pick.modalPresentationStyle=UIModalPresentationStyle.custom
+        present(pick, animated: true, completion: nil)
+    }
+    @IBAction func showSmallClass(_ sender: UIButton) {
+    }
+    
+    func getClasses(){
+        CHProgressHUD.showWithText("查询中...")
+        let soapManager=SoapManager()
+        soapManager.postRequest(SoapAction.Service.repairService.rawValue, action: SoapAction.ServiceAction.RepairServiceAction.Classes.rawValue,success: { (result) in
+            CHProgressHUD.dismissHUD()
+            self.breakType=JSONDeserializer<BreakType>.deserializeFrom(json: result, designatedPath: "data")
+            self.bigClassView.setTitle(self.breakType.bigClassList[0].name, for: UIControlState.normal)
+            self.smallClassView.setTitle(self.breakType.smallClassList[0].name, for: UIControlState.normal)
+//            self.areaButton.setTitle(self.breakType[0].name, for: UIControlState.normal)
+        }) { (Error) in
+            CHLog(Error)
+            CHProgressHUD.dismissHUD()
+        }
+    }
+    
+    func getSheet() ->ZLPhotoActionSheet{
+        let sheet = ZLPhotoActionSheet()
         sheet.maxPreviewCount=20
         sheet.maxSelectCount=4
         sheet.sender=self
+        if self.lastSelectAssets != nil{
+            sheet.arrSelectedAssets = (self.lastSelectAssets as NSArray).mutableCopy() as! NSMutableArray
+        }
+        
         sheet.selectImageBlock = { (images,assets,isOrg) in
             self.images = images
             self.lastSelectAssets = assets
             self.lastSelectPhotos = images
             self.imagesView.reloadData()
         }
+        return sheet
     }
     
     func initCollectionView(){
 //        let width = UIScreen.main.bounds.size.width
-        let width = imagesView.width
+        let width = imagesView.frame.width
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: (width-9)/4, height: (width-9)/4)
         layout.minimumInteritemSpacing = 1.5;
@@ -65,8 +113,9 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //如果是最后一个，点击就打开选择照片，否则就查看照片
+        let sheet = getSheet()
         if indexPath.row==images.count{
-            resetAddImage()
+            sheet.showPreview(animated: true)
         }else{
             sheet.previewSelectedPhotos(lastSelectPhotos, assets: lastSelectAssets, index: indexPath.row)
         }
@@ -79,10 +128,7 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
         return CGSize(width: width, height: width)
     }
     
-    func resetAddImage(){
-        CHLog("add")
-        sheet.showPreview(animated: true)
-    }
+
     @IBAction func back(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
