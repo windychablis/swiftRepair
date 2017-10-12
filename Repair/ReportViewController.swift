@@ -10,7 +10,7 @@ import UIKit
 import ZLPhotoBrowser
 import HandyJSON
 
-class ReportViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class ReportViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITextFieldDelegate {
     
     @IBOutlet weak var imagesView: UICollectionView!
     var images : [UIImage] = []
@@ -24,6 +24,7 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     var breakType : BreakType!
     var currentBig : BreakType.ClassType!
+    var currentSmall : BreakType.ClassType!
     override func viewDidLoad() {
         super.viewDidLoad()
         getClasses()
@@ -34,7 +35,6 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
     @IBAction func showBigClass(_ sender: UIButton) {
         let pick=CHPickerViewController(nibName: "CHPickerViewController", bundle: nil)
         pick.objs=breakType.bigClassList
-        CHLog(pick.objs[0].name)
         pick.selectedObj=breakType.bigClassList[0]
         currentBig=breakType.bigClassList[0]
         pick.backBlock={type in
@@ -44,8 +44,36 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
         }
         pick.modalPresentationStyle=UIModalPresentationStyle.custom
         present(pick, animated: true, completion: nil)
+        
     }
     @IBAction func showSmallClass(_ sender: UIButton) {
+        showClassesType(classType: 1)
+    }
+    
+    func showClassesType(classType : Int){
+        let pick=CHPickerViewController(nibName: "CHPickerViewController", bundle: nil)
+        pick.objs=classType==0 ? breakType.bigClassList : breakType.smallClassList
+        pick.selectedObj=pick.objs[0]
+        if classType==0 {
+            currentBig=pick.selectedObj as! BreakType.ClassType
+        }else{
+            currentSmall=pick.selectedObj as! BreakType.ClassType
+        }
+        
+        pick.backBlock={type in
+            //回传选择的政务中心
+            if classType==0 {
+                self.currentBig=type as! BreakType.ClassType
+                self.bigClassView.setTitle(type.name, for: UIControlState.normal)
+            }else{
+                self.currentSmall=type as! BreakType.ClassType
+                self.smallClassView.setTitle(type.name, for: UIControlState.normal)
+            }
+            
+            
+        }
+        pick.modalPresentationStyle=UIModalPresentationStyle.custom
+        present(pick, animated: true, completion: nil)
     }
     
     func getClasses(){
@@ -56,7 +84,6 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
             self.breakType=JSONDeserializer<BreakType>.deserializeFrom(json: result, designatedPath: "data")
             self.bigClassView.setTitle(self.breakType.bigClassList[0].name, for: UIControlState.normal)
             self.smallClassView.setTitle(self.breakType.smallClassList[0].name, for: UIControlState.normal)
-//            self.areaButton.setTitle(self.breakType[0].name, for: UIControlState.normal)
         }) { (Error) in
             CHLog(Error)
             CHProgressHUD.dismissHUD()
@@ -131,5 +158,16 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
 
     @IBAction func back(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+        if textField == titleView {
+            questionView.becomeFirstResponder()
+        }else{
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }
