@@ -16,10 +16,12 @@
 		4610EC3F1F29B7BE00B7191C /* SoapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610EC3E1F29B7BE00B7191C /* SoapAction.swift */; };
 		4610EC411F29B9CF00B7191C /* SoapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610EC401F29B9CF00B7191C /* SoapManager.swift */; };
 		4610EC431F29DB4B00B7191C /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610EC421F29DB4B00B7191C /* OrderedDictionary.swift */; };
+		461188C41F9830430020E5ED /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461188C31F9830430020E5ED /* UIScrollView+Extension.swift */; };
 		4611B2871F4D2ADD00D3B54E /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4611B2861F4D2ADD00D3B54E /* UserInfo.swift */; };
 		4611B2891F4D644300D3B54E /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4611B2881F4D644300D3B54E /* ReportViewController.swift */; };
 		4612DF901F4C743E00900AD8 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612DF8E1F4C743E00900AD8 /* AreaViewController.swift */; };
 		4612DF911F4C743E00900AD8 /* AreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4612DF8F1F4C743E00900AD8 /* AreaViewController.xib */; };
+		46275B7E1F8FA2A30037E0C9 /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46275B7D1F8FA2A30037E0C9 /* NSData+Extension.swift */; };
 		4629224F1F316195008757CB /* RepairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4629224D1F316195008757CB /* RepairCell.swift */; };
 		462922501F316195008757CB /* RepairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4629224E1F316195008757CB /* RepairCell.xib */; };
 		462922521F31B303008757CB /* RepairInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462922511F31B303008757CB /* RepairInfo.xib */; };
@@ -27,6 +29,7 @@
 		463C73501F4C0BC200F81BBA /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463C734F1F4C0BC200F81BBA /* MineViewController.swift */; };
 		464418811F8F09F600192315 /* BreakType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464418801F8F09F600192315 /* BreakType.swift */; };
 		4656A0D21F73A537003BE3F0 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656A0D11F73A536003BE3F0 /* ImageCell.swift */; };
+		4668A8551F90A42000D141F0 /* SoapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668A8541F90A42000D141F0 /* SoapModel.swift */; };
 		4678CD491F43E4A300ADEE94 /* EquipmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678CD481F43E4A300ADEE94 /* EquipmentDetail.swift */; };
 		467AB4741F458A1700BDFA2C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AB4731F458A1700BDFA2C /* UIImage+Extension.swift */; };
 		468E74E51F3060FC00177212 /* EquipmentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E74E41F3060FC00177212 /* EquipmentInfo.swift */; };
@@ -37,6 +40,8 @@
 		46B2D0621F428C8200B4FC6F /* InfDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2D0611F428C8200B4FC6F /* InfDetailViewController.swift */; };
 		46C1916D1F4A907000E7CD4B /* ScanView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C1916C1F4A907000E7CD4B /* ScanView.xib */; };
 		46C1916F1F4AADF500E7CD4B /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C1916E1F4AADF500E7CD4B /* QRCodeViewController.swift */; };
+		46C7A2C51F948F500063CBD9 /* RepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C7A2C41F948F500063CBD9 /* RepairViewController.swift */; };
+		46C7A2C71F94AF910063CBD9 /* RepairDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C7A2C61F94AF910063CBD9 /* RepairDetailViewController.swift */; };
 		46E73D9F1F26F44700FC2F02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E73D9E1F26F44700FC2F02 /* AppDelegate.swift */; };
 		46E73DA11F26F44700FC2F02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E73DA01F26F44700FC2F02 /* ViewController.swift */; };
 		46E73DA91F26F44700FC2F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E73DA71F26F44700FC2F02 /* LaunchScreen.storyboard */; };
@@ -81,10 +86,12 @@
 		4610EC3E1F29B7BE00B7191C /* SoapAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapAction.swift; sourceTree = "<group>"; };
 		4610EC401F29B9CF00B7191C /* SoapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapManager.swift; sourceTree = "<group>"; };
 		4610EC421F29DB4B00B7191C /* OrderedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
+		461188C31F9830430020E5ED /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		4611B2861F4D2ADD00D3B54E /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		4611B2881F4D644300D3B54E /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		4612DF8E1F4C743E00900AD8 /* AreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		4612DF8F1F4C743E00900AD8 /* AreaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaViewController.xib; sourceTree = "<group>"; };
+		46275B7D1F8FA2A30037E0C9 /* NSData+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
 		4629224D1F316195008757CB /* RepairCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepairCell.swift; sourceTree = "<group>"; };
 		4629224E1F316195008757CB /* RepairCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepairCell.xib; sourceTree = "<group>"; };
 		462922511F31B303008757CB /* RepairInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepairInfo.xib; sourceTree = "<group>"; };
@@ -93,6 +100,7 @@
 		464418801F8F09F600192315 /* BreakType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakType.swift; sourceTree = "<group>"; };
 		464F7223EA358F36120F0E9D /* Pods-Repair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repair.release.xcconfig"; path = "Pods/Target Support Files/Pods-Repair/Pods-Repair.release.xcconfig"; sourceTree = "<group>"; };
 		4656A0D11F73A536003BE3F0 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		4668A8541F90A42000D141F0 /* SoapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoapModel.swift; sourceTree = "<group>"; };
 		4678CD481F43E4A300ADEE94 /* EquipmentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentDetail.swift; sourceTree = "<group>"; };
 		467AB4731F458A1700BDFA2C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		468E74E41F3060FC00177212 /* EquipmentInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentInfo.swift; sourceTree = "<group>"; };
@@ -103,6 +111,8 @@
 		46B2D0611F428C8200B4FC6F /* InfDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfDetailViewController.swift; sourceTree = "<group>"; };
 		46C1916C1F4A907000E7CD4B /* ScanView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanView.xib; sourceTree = "<group>"; };
 		46C1916E1F4AADF500E7CD4B /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		46C7A2C41F948F500063CBD9 /* RepairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairViewController.swift; sourceTree = "<group>"; };
+		46C7A2C61F94AF910063CBD9 /* RepairDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairDetailViewController.swift; sourceTree = "<group>"; };
 		46E73D9B1F26F44700FC2F02 /* Repair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E73D9E1F26F44700FC2F02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E73DA01F26F44700FC2F02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +170,8 @@
 				460E9CCA1F2AE02F00DFA483 /* CHProgressHUD.swift */,
 				46B2B3C71F2EC03A00DE666D /* CacheUtil.swift */,
 				467AB4731F458A1700BDFA2C /* UIImage+Extension.swift */,
+				46275B7D1F8FA2A30037E0C9 /* NSData+Extension.swift */,
+				461188C31F9830430020E5ED /* UIScrollView+Extension.swift */,
 			);
 			name = other;
 			sourceTree = "<group>";
@@ -179,6 +191,8 @@
 				4612DF8E1F4C743E00900AD8 /* AreaViewController.swift */,
 				4612DF8F1F4C743E00900AD8 /* AreaViewController.xib */,
 				4611B2881F4D644300D3B54E /* ReportViewController.swift */,
+				46C7A2C41F948F500063CBD9 /* RepairViewController.swift */,
+				46C7A2C61F94AF910063CBD9 /* RepairDetailViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -278,6 +292,7 @@
 				4610EC401F29B9CF00B7191C /* SoapManager.swift */,
 				4610EC421F29DB4B00B7191C /* OrderedDictionary.swift */,
 				46E73DCF1F271D0900FC2F02 /* Response.swift */,
+				4668A8541F90A42000D141F0 /* SoapModel.swift */,
 			);
 			name = soapUtil;
 			sourceTree = "<group>";
@@ -506,13 +521,17 @@
 				46B2B3C81F2EC03A00DE666D /* CacheUtil.swift in Sources */,
 				46FCD75A1F7F486C00123519 /* CHPickerViewController.swift in Sources */,
 				467AB4741F458A1700BDFA2C /* UIImage+Extension.swift in Sources */,
+				46C7A2C71F94AF910063CBD9 /* RepairDetailViewController.swift in Sources */,
+				4668A8551F90A42000D141F0 /* SoapModel.swift in Sources */,
 				4678CD491F43E4A300ADEE94 /* EquipmentDetail.swift in Sources */,
 				46FCD75C1F7F4C3300123519 /* CHPickerModel.swift in Sources */,
 				463C73501F4C0BC200F81BBA /* MineViewController.swift in Sources */,
+				46C7A2C51F948F500063CBD9 /* RepairViewController.swift in Sources */,
 				4611B2891F4D644300D3B54E /* ReportViewController.swift in Sources */,
 				46E73DA11F26F44700FC2F02 /* ViewController.swift in Sources */,
 				460CA8C61F28743F000A2B04 /* MD5.swift in Sources */,
 				4656A0D21F73A537003BE3F0 /* ImageCell.swift in Sources */,
+				46275B7E1F8FA2A30037E0C9 /* NSData+Extension.swift in Sources */,
 				46C1916F1F4AADF500E7CD4B /* QRCodeViewController.swift in Sources */,
 				46E73DCD1F271CCB00FC2F02 /* Area.swift in Sources */,
 				46B2B3CA1F2ECC4F00DE666D /* SearchViewController.swift in Sources */,
@@ -520,6 +539,7 @@
 				4610EC431F29DB4B00B7191C /* OrderedDictionary.swift in Sources */,
 				460E9CCB1F2AE02F00DFA483 /* CHProgressHUD.swift in Sources */,
 				462922541F31B87C008757CB /* RepairInfoView.swift in Sources */,
+				461188C41F9830430020E5ED /* UIScrollView+Extension.swift in Sources */,
 				4610EC3F1F29B7BE00B7191C /* SoapAction.swift in Sources */,
 				46E73D9F1F26F44700FC2F02 /* AppDelegate.swift in Sources */,
 				468E74E71F307A9100177212 /* InformationViewController.swift in Sources */,

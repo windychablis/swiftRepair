@@ -42,6 +42,55 @@ class RepairInfoView: UIView {
         }
     }
     
+    @IBInspectable     //属性可是化设置的关键字
+    var number:String = "NO.1"{
+        didSet{//设置属性观察器，保证实时改变
+            numberView.text = number
+        }
+    }
+    @IBInspectable     //属性可是化设置的关键字
+    var type:String = "取号机"{
+        didSet{//设置属性观察器，保证实时改变
+            typeView.text = type
+        }
+    }
+    @IBInspectable     //属性可是化设置的关键字
+    var area:String = "北京市"{
+        didSet{//设置属性观察器，保证实时改变
+            areaView.text = area
+        }
+    }
+    @IBInspectable     //属性可是化设置的关键字
+    var date:String = "2017-01-01"{
+        didSet{//设置属性观察器，保证实时改变
+            dateView.text = date
+        }
+    }
+    @IBInspectable     //属性可是化设置的关键字
+    var area2:String = "左边"{
+        didSet{//设置属性观察器，保证实时改变
+            areaView2.text = area2
+        }
+    }
+    @IBInspectable     //属性可是化设置的关键字
+    var floor:String = "一楼"{
+        didSet{//设置属性观察器，保证实时改变
+            floorView.text = floor
+        }
+    }
+    @IBInspectable     //属性可是化设置的关键字
+    var ip:String = "左边"{
+        didSet{//设置属性观察器，保证实时改变
+            ipView.text = ip
+        }
+    }
+    @IBInspectable     //属性可是化设置的关键字
+    var remark:String = "一楼"{
+        didSet{//设置属性观察器，保证实时改变
+            remarkView.text = remark
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.initialFromXib()

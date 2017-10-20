@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import HandyJSON
 
 class InformationViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     let repairCellId:String="repairCell"
     var equipment:EquipmentInfo!
+    
+    var headerView : RepairInfoView!
     @IBOutlet weak var tableView: UITableView!
+    
     
     var detailVc:InfDetailViewController!
     
@@ -30,6 +34,7 @@ class InformationViewController: UIViewController,UITableViewDelegate,UITableVie
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getData()
         //        let headerView=Bundle.main.loadNibNamed("RepairInfo", owner: nil, options: nil)?.first as! RepairInfoView
         //        headerView.equipmentInfo=equipment.clientinfo
         //        tableView.tableHeaderView=headerView
@@ -61,7 +66,22 @@ class InformationViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view=section==0 ? RepairInfoView() : TableHeaderView()
+        var view : UIView
+        if section==0 {
+            view=RepairInfoView()
+            headerView=view as! RepairInfoView
+            headerView.number=equipment.clientinfo.CLIENT_TYPE
+            headerView.type=equipment.clientinfo.TERM_TYPE
+            headerView.area=equipment.clientinfo.AREA_CODE
+            headerView.date=equipment.clientinfo.TIMEVIEW
+            headerView.area2=equipment.clientinfo.REMARK
+            headerView.floor=equipment.clientinfo.FLOORNUM
+            headerView.ip=equipment.clientinfo.CLIENT_IP
+            headerView.remark=equipment.clientinfo.REMARK
+
+        }else{
+            view=TableHeaderView()
+        }
         return view
     }
     
@@ -81,6 +101,9 @@ class InformationViewController: UIViewController,UITableViewDelegate,UITableVie
         if segue.identifier=="detail" {
             detailVc=segue.destination as! InfDetailViewController
             detailVc.repair=sender as! EquipmentInfo.Repair
+        }else if segue.identifier=="repair"{
+            let vc=segue.destination as! ReportViewController
+            vc.clientInfo=equipment.clientinfo
         }
         
     }
@@ -91,13 +114,19 @@ class InformationViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     @IBAction func back(_ sender: UIButton) {
-        dismiss(animated: false, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
-    
-    @IBAction func repair(_ sender: Any) {
-        
+
+    func getData(){
+        let soapManager=SoapManager()
+        soapManager.setValue(equipment.clientinfo.CLIENT_TYPE, forKey: "clientType")
+        soapManager.postRequest(SoapAction.Service.repairService.rawValue, action: SoapAction.ServiceAction.RepairServiceAction.EquimentInfoAction.rawValue,success: { (result) in
+            self.equipment=JSONDeserializer<EquipmentInfo>.deserializeFrom(json: result, designatedPath: "data")
+            self.tableView.reloadData()
+        }) { (Error) in
+            CHLog(Error)
+        }
     }
-    
     
 }

@@ -9,6 +9,12 @@
 import UIKit
 import HandyJSON
 
+//全局属性
+//var user = {()->UserInfo in
+//    print("空的")
+//    return UserInfo()
+//}()
+
 class LoginViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var usernameField: UITextField!
     
@@ -46,7 +52,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         soapManager.setValue(username!, forKey: "loginName")
         soapManager.setValue(password!.MD5(), forKey: "passWord")
         soapManager.postRequest(SoapAction.Service.loginService.rawValue, action: SoapAction.ServiceAction.LoginServiceAction.LogonAction.rawValue, success: { (result) in
-            user=JSONDeserializer<UserInfo>.deserializeFrom(json: result, designatedPath: "data")
+            user=JSONDeserializer<UserInfo>.deserializeFrom(json: result, designatedPath: "data")!
             CHProgressHUD.dismissHUD()
             //保存用户信息
             CacheUtil.saveUserInfo(username: username!, password: password!)

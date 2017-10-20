@@ -20,7 +20,7 @@ class RepairCell: UITableViewCell {
             return _repairData
         }set{
             _repairData=newValue
-            titleView.text=_repairData.TITLE.isEmpty ? _repairData.BIGCLASS+"|"+_repairData.SMALLCLASS : _repairData.TITLE
+            titleView.text=_repairData.TITLE==nil||_repairData.TITLE.isEmpty ? _repairData.BIGCLASS+"|"+_repairData.SMALLCLASS : _repairData.TITLE
             dateView.text=_repairData.REPAIRDATE
             statusView.text=_repairData.STATUS=="0" ? "未维修" : "已维修"
         }

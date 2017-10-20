@@ -29,9 +29,13 @@ class SoapAction : NSObject{
             case AllAreaAction = "queryAllArea"
             case EquimentInfoAction = "queryTainIdByClientType"
             case EquimentDetailAction="queryMainTainById"
-            case MyRepairAction="queryListByRepairId"
+            case MyRepairAction = "queryListByRepairId"
+            case RepairAction = "queryMainTainByCode"
             
             case Classes = "insertView"
+            case UploadImages="insertPic"
+            case UploadInfo="insertRepair"
+            case UploadRepairInfo="updateMainTain"
         }
     }
 }

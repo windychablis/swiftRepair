@@ -25,6 +25,8 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
     var breakType : BreakType!
     var currentBig : BreakType.ClassType!
     var currentSmall : BreakType.ClassType!
+    
+    var clientInfo :EquipmentInfo.Client!
     override func viewDidLoad() {
         super.viewDidLoad()
         getClasses()
@@ -32,6 +34,68 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
         initCollectionView()
         
     }
+    
+    //MARK: 维修上传图片和提交逻辑
+    @IBAction func doRepair(_ sender: UIButton) {
+        uploadImage()
+    }
+    
+    func uploadImage(){
+        //将所有选择的图片都转换base64并且用逗号隔开
+        if lastSelectPhotos==nil {
+            showToast(controller:self,message: "请选择图片上传")
+            return
+        }
+        var images = Array<String>()
+        for image in lastSelectPhotos {
+            let base64Image = image.resetSizeOfImageData(maxSize: 2000).toBase64String()
+//            let base64Image=image.base64()
+            images.append(base64Image)
+        }
+        let urls=images.joined(separator: ",")
+        
+        //上传图片
+        CHProgressHUD.showWithText("上传中...")
+        let soapManager=SoapManager()
+        soapManager.setValue("repair/image", forKey: "folder")
+        soapManager.setValue(1, forKey: "type")
+        soapManager.setValue(urls, forKey: "file")
+        soapManager.setValue("temp.jpg", forKey: "fileName")
+        soapManager.setValue("", forKey: "mainTainId")
+        soapManager.postRequest(SoapAction.Service.repairService.rawValue, action: SoapAction.ServiceAction.RepairServiceAction.UploadImages.rawValue,success: { (result) in
+            let mainTain=JSONDeserializer<EquipmentInfo.MainTain>.deserializeFrom(json: result, designatedPath: "data")!
+            self.uploadInfo(id: mainTain.mainTainId)
+        }) { (Error) in
+            showToast(controller: self, message: "网络超时")
+            CHProgressHUD.dismissHUD()
+        }
+    }
+    
+    func uploadInfo(id: String){
+        let soapManager=SoapManager()
+        soapManager.setValue(currentBig.id, forKey: "bigClass")
+        soapManager.setValue(currentSmall.id, forKey: "smallClass")
+        soapManager.setValue(titleView.text, forKey: "title")
+        soapManager.setValue(questionView.text, forKey: "problemDtion")
+        soapManager.setValue(user.User_ID, forKey: "repairUserId")
+        soapManager.setValue(clientInfo.CLIENT_TYPE, forKey: "clienttype")
+        soapManager.setValue(id, forKey: "mainTainId")
+        soapManager.postRequest(SoapAction.Service.repairService.rawValue, action: SoapAction.ServiceAction.RepairServiceAction.UploadInfo.rawValue,success: { (result) in
+            CHProgressHUD.dismissHUD()
+            let model=JSONDeserializer<SoapModel>.deserializeFrom(json: result)!
+            if model.code==0{
+            self.dismiss(animated: true, completion: nil)
+            }
+        }) { (Error) in
+            CHLog(Error)
+            showToast(controller: self, message: Error)
+            CHProgressHUD.dismissHUD()
+        }
+    }
+    
+    
+    //MARK: 分割线
+    
     @IBAction func showBigClass(_ sender: UIButton) {
         let pick=CHPickerViewController(nibName: "CHPickerViewController", bundle: nil)
         pick.objs=breakType.bigClassList
@@ -84,6 +148,8 @@ class ReportViewController: UIViewController,UICollectionViewDelegate,UICollecti
             self.breakType=JSONDeserializer<BreakType>.deserializeFrom(json: result, designatedPath: "data")
             self.bigClassView.setTitle(self.breakType.bigClassList[0].name, for: UIControlState.normal)
             self.smallClassView.setTitle(self.breakType.smallClassList[0].name, for: UIControlState.normal)
+            self.currentBig=self.breakType.bigClassList[0]
+            self.currentSmall=self.breakType.smallClassList[0]
         }) { (Error) in
             CHLog(Error)
             CHProgressHUD.dismissHUD()

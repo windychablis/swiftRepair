@@ -42,4 +42,10 @@ func CHLog<T> (_ message:T,method:String=#function,line:Int=#line){
         print("\(method)[\(line)]: \(message)")
     #endif
 }
+func showToast(controller : UIViewController, message: String, title: String = "提示"){
+    let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    let btnOK = UIAlertAction(title: "好的", style: .default, handler: nil)
+    alert.addAction(btnOK)
+    controller.present(alert, animated: true, completion: nil)
+}
 

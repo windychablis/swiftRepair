@@ -70,7 +70,7 @@ class SoapManager: NSObject,XMLParserDelegate {
     }
     
     private func getURLRequest(_ action:String,URL:Foundation.URL,soapMsg:String)->URLRequest{
-        var request:URLRequest = URLRequest(url: URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 1)
+        var request:URLRequest = URLRequest(url: URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
         request.setValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
         let soapAction = kNameSpace+action
         request.setValue(soapAction, forHTTPHeaderField: "SOAPAction")

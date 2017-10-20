@@ -42,4 +42,10 @@ class EquipmentInfo: HandyJSON {
         var STATUS:String!
         var TITLE:String!
     }
+    
+    class MainTain: HandyJSON {
+        required init() {
+        }
+        var mainTainId : String!
+    }
 }
